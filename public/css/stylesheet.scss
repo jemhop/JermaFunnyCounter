@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
+
+
 body {
   background: #121212;
   font-family: 'Poppins';
   margin: 0;
+  padding: 0;
+
+  /*im a lazy fuck who couldnt come up with a way to get a proper blur across this whole image so im just gonna pre blur the image, if anyone out there is much better at 
+  html and css than me, please make this better <3*/
+  
+  background: url('../media/images/interestingman2x.png') no-repeat;
+
+  background-size: cover;
+  background-size: 100%;
+
+  overflow: hidden;
 }
 
 .titlebar {
@@ -16,16 +29,12 @@ body {
 }
 
 .counterSection{
+    color: #dddddd;
     overflow: hidden;
     position:relative;
     text-align:center;
-    .background{
-        max-width: 100%;
-        max-height: 100%;
-        filter: blur(7px);
-        -webkit-filter: blur(7px);
-        -moz-filter: blur(7px);
-        -o-filter: blur(7px);
-        -ms-filter: blur(7px);
+
+    .counters {
+        color:ffff;
     }
 }
