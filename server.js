@@ -13,11 +13,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+
+
 let funnyCount = 0;
 let users = [];
 const channel = 'Kyle'
 let lastFilepath;
 
+app.use(express.static(path.join(__dirname, 'public')));
 
 let now = dayjs();
 
@@ -26,10 +29,12 @@ const client = new tmi.Client({
 	channels: [channel]
 });
 
+io.on('connection', socket => {
+    socket.emit("connection", socket.id);
+})
 
 client.connect();
 console.log(`Listening on channel ${channel}`);
-
 
 client.on('message', (channel, tags, message, self) => {
     const plusTwo = /(?:^|\W)\+2(?:$|\W)/;
@@ -77,7 +82,9 @@ function saveCount(funnyCount)
 }
 
 
-io.on('connection', socket => {
-    user.push(socket.id);
-})
+
+
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 			

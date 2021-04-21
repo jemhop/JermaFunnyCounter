@@ -10,11 +10,12 @@ body {
 
   /*im a lazy fuck who couldnt come up with a way to get a proper blur across this whole image so im just gonna pre blur the image, if anyone out there is much better at 
   html and css than me, please make this better <3*/
-  
-  background: url('../media/images/interestingman2x.png') no-repeat;
-
+  background: url('../media/images/interestingman2x.png');
   background-size: cover;
-  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #464646;
 
   overflow: hidden;
 }
@@ -22,9 +23,11 @@ body {
 .titlebar {
     background: #F36F6F;
     color: #ffff; 
-    padding: 1em;
+    height: 60%;
+    padding: 0.4em;
     .title {
-        font-size: 9px;
+        text-align:center;
+        font-size: 12px;
     }
 }
 
@@ -36,5 +39,40 @@ body {
 
     .counters {
         color:ffff;
+        .mainCounter{
+            font-size: 350px;
+            margin-top: 30px;
+            margin-bottom:30px;
+            animation: fadeIn linear 1s;
+            -webkit-animation: fadeIn linear 1s;
+            -moz-animation: fadeIn linear 1s;
+            -o-animation: fadeIn linear 1s;
+            -ms-animation: fadeIn linear 1s;
+        }
     }
 }
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
