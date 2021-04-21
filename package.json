@@ -1,0 +1,18 @@
+{
+  "name": "jermafunnytest",
+  "version": "1.0.0",
+  "description": "mockup of jerma funny counter",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.10.4",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "tmi.js": "^1.8.2"
+  }
+}

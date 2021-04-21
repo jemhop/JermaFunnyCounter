@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+  background: #121212;
+  font-family: 'Poppins';
+  margin: 0;
+}
+
+.titlebar {
+    background: #F36F6F;
+    color: #ffff; 
+    padding: 1em;
+    .title {
+        font-size: 9px;
+    }
+}
+
+.counterSection{
+    overflow: hidden;
+    position:relative;
+    text-align:center;
+    .background{
+        max-width: 100%;
+        max-height: 100%;
+        filter: blur(7px);
+        -webkit-filter: blur(7px);
+        -moz-filter: blur(7px);
+        -o-filter: blur(7px);
+        -ms-filter: blur(7px);
+    }
+}
