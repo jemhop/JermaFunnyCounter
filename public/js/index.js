@@ -4,6 +4,6 @@ const socket = io();
 
 socket.on('connection', socketID => {
     console.log(socketID);
-    var countUp = new CountUp('score', 500000);
+    var countUp = new CountUp('score', -600);
     countUp.start();
 })

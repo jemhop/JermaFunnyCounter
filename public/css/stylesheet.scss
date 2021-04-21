@@ -2,6 +2,7 @@
 
 
 
+
 body {
   background: #121212;
   font-family: 'Poppins';
@@ -10,7 +11,7 @@ body {
 
   /*im a lazy fuck who couldnt come up with a way to get a proper blur across this whole image so im just gonna pre blur the image, if anyone out there is much better at 
   html and css than me, please make this better <3*/
-  background: url('../media/images/interestingman2x.png');
+  background: url('../media/images/interestingman2x_blur.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -38,16 +39,35 @@ body {
     text-align:center;
 
     .counters {
-        color:ffff;
+        color:#ffff;
         .mainCounter{
-            font-size: 350px;
-            margin-top: 30px;
-            margin-bottom:30px;
+            font-size: 11vw;
+            margin-top: 0.3vw;
+            margin-bottom:5px;
             animation: fadeIn linear 1s;
             -webkit-animation: fadeIn linear 1s;
             -moz-animation: fadeIn linear 1s;
             -o-animation: fadeIn linear 1s;
             -ms-animation: fadeIn linear 1s;
+        }
+        .smallCounter {
+            margin: 0;
+        }
+    }
+}
+
+.latestOccurence{
+    margin:auto;
+    margin-top: 100px;
+    width: fit-content;
+    height: fit-content;
+    .messageDiv{
+        border-radius:50px;
+        padding-left:10%;
+        padding-right:10%;
+        background-color: #252525;
+        .userName{
+            color:#F36F6F;
         }
     }
 }
@@ -76,3 +96,11 @@ body {
     0% {opacity:0;}
     100% {opacity:1;}
   }
+
+  /* setting none makes it display and setting block makes it not display, dunno why*/
+  .github-corner {display: none;}
+
+@media only screen and (min-width: 600px) {
+    .github-corner {display:block;}
+    /*or anything you want to do*/ 
+}
